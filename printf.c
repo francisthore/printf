@@ -45,6 +45,12 @@ int _printf(const char *format, ...)
 					types[j].f(args);
 					break;
 				}
+				else
+				{
+					/* print_percentage(); */
+					_putchar(format[i]);
+					break;
+				}
 			}
 		}
 		else
