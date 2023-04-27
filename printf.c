@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					/* print_percentage(); */
+					print_percentage(); 
 					_putchar(format[i]);
 					break;
 				}
