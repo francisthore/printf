@@ -9,7 +9,7 @@
  * Return: void
  */
 
-int _printf(const char * format, ...)
+int _printf(const char *format, ...)
 {
 	int i, j, len;
 	va_list args;
@@ -21,17 +21,15 @@ int _printf(const char * format, ...)
 	{"i", print_int},
 	{NULL, NULL}
 	};
-
-	for (len = 0; format[len] != '\0'; len++);
-
+	for (len = 0; format[len] != '\0'; len++)
+	{
+	}
 	va_start(args, format);
-
 	for (i = 0; i < len; i++)
 	{
 		if (format[i] == '%')
 		{
 			i += 1;
-
 			for (j = 0; j < 4; j++)
 			{
 				if (format[i] == '%')
@@ -39,7 +37,7 @@ int _printf(const char * format, ...)
 					print_percent();
 					break;
 				}
-				if(format[i] == *types[j].tp)
+				if (format[i] == *types[j].tp)
 				{
 					types[j].f(args);
 					break;
@@ -52,4 +50,3 @@ int _printf(const char * format, ...)
 	va_end(args);
 	return (i);
 }
-

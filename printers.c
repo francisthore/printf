@@ -23,14 +23,17 @@ void print_string(va_list args)
 
 	char *str = va_arg(args, char *);
 
-	for (i = 0; str[i] != '\0'; i++);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+
+	}
+
 	for (j = 0; j < i; j++)
 		_putchar(str[j]);
 }
 
 /**
  * print_percent - prints a % character
- * @args: va_list args
  * Return: void
  */
 
@@ -65,7 +68,7 @@ void print_num(int num)
 	}
 	if (num != 0)
 	{
-		print_num(num/10);
-		_putchar((num%10) + '0');
+		print_num(num / 10);
+		_putchar((num % 10) + '0');
 	}
 }
