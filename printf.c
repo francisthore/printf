@@ -21,6 +21,9 @@ int _printf(const char *format, ...)
 	{"i", print_int},
 	{NULL, NULL}
 	};
+
+	if (format == NULL)
+		return (-1);
 	for (len = 0; format[len] != '\0'; len++)
 	{
 	}
